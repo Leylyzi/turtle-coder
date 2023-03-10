@@ -1,0 +1,53 @@
+function main() {
+	turtle->setSpeed(500)
+	turtle->back(200)
+	turtle->leftTurn(90)
+	turtle->forward(100)
+	# begin door
+	turtle->rightTurn(90)
+	turtle->forward(60)
+	turtle->leftTurn(90)
+	turtle->forward(35)
+	turtle->leftTurn(90)
+	turtle->forward(60)
+	turtle->rightTurn(90)
+	# end door
+	turtle->forward(200-(100+35))
+	turtle->rightTurn(90)
+	turtle->forward(200)
+	turtle->rightTurn(45)
+	var dachschraege := Pytagoras(100,100)
+	turtle->forward(dachschraege)
+	turtle->rightTurn(90)
+	turtle->forward(dachschraege)
+	turtle->penUp()
+	turtle->rightTurn(45)
+	turtle->forward(75)
+	turtle->rightTurn(90)
+	turtle->forward(25)
+	turtle->penDown()
+	turtle->forward(60)
+	turtle->rightTurn(90)
+	turtle->forward(60)
+	turtle->rightTurn(90)
+	turtle->forward(60)
+	turtle->rightTurn(90)
+	turtle->forward(60)
+	turtle->penUp()
+	turtle->rightTurn(90)
+	turtle->forward(200-(2*25))
+	# begin triangle window
+	turtle->penDown()
+	turtle->rightTurn(120)
+	var windowlength := Pytagoras(60,30)
+	turtle->forward(windowlength)
+	turtle->rightTurn(120)
+	turtle->forward(windowlength)
+	turtle->rightTurn(120)
+	turtle->forward(windowlength)
+	# end triangle window
+}
+function Pytagoras(a,b) {
+	var c := sqrt(a*a + b*b)
+	return c
+}
